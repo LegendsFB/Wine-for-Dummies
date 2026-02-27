@@ -1,138 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Wine for Dummies</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Wine for Dummies (Hospitality Edition)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #f5f5f5;
-      color: #222;
-      line-height: 1.6;
+    :root{
+      --bg:#f6f4f2; --card:#ffffff; --ink:#1f1f1f; --muted:#5a5a5a;
+      --accent:#4b0f1c; --border:#e7e2de; --chip:#f1ece8;
+      --ok:#1d7a3a; --warn:#a35a00; --bad:#b00020;
     }
-
-    header {
-      background: #4b0f1c;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-    }
-
-    header p {
-      margin-top: 0.5rem;
-      opacity: 0.9;
-    }
-
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    section {
-      background: white;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    h2 {
-      margin-top: 0;
-      color: #4b0f1c;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    a {
-      color: #4b0f1c;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+    header{background:var(--accent);color:#fff;padding:2.1rem 1rem 1.2rem;text-align:center}
+    header h1{margin:0;font-size:2.0rem}
+    header p{margin:.55rem auto 0;max-width:980px;opacity:.95}
+    .wrap{max-width:1100px;margin:1.4rem auto;padding:0 1rem}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.05rem 1.05rem;box-shadow:0 2px 10px rgba(0,0,0,0.04)}
+    h2{margin:.15rem 0 .7rem;color:var(--accent);font-size:1.3rem}
+    h3{margin:.1rem 0 .55rem;font-size:1.05rem}
+    p{margin:.45rem 0}
+    .muted{color:var(--muted)}
+    .col-12{grid-column:span 12}
+    .col-8{grid-column:span 8}
+    .col-6{grid-column:span 6}
+    .col-4{grid-column:span 4}
+    .col-3{grid-column:span 3}
+    @media (max-width:900px){.col-8,.col-6,.col-4,.col-3{grid-column:span 12}}
+    .chips{display:flex;flex-wrap:wrap;gap:.45rem;margin:.55rem 0 0}
+    .chip{background:var(--chip);border:1px solid var(--border);padding:.35rem .55rem;border-radius:999px;font-size:.85rem;white-space:nowrap}
+    .rule{border-left:4px solid var(--accent);padding:.7rem .85rem;background:#fff;border-radius:10px;border:1px solid var(--border);margin:.7rem 0 0}
+    ul{margin:.4rem 0 0;padding-left:1.15rem}
+    li{margin:.25rem 0}
+    details{border:1px solid var(--border);border-radius:12px;padding:.7rem .85rem;background:#fff}
+    summary{cursor:pointer;font-weight:700;color:var(--accent)}
+    .pill{display:inline-block;font-weight:700;padding:.18rem .5rem;border-radius:999px;font-size:.8rem;border:1px solid var(--border);background:#fff;margin-right:.35rem}
+    .ok{color:var(--ok);border-color:#cfe9d7;background:#f2fbf5}
+    .warn{color:var(--warn);border-color:#f0dfc5;background:#fff9f1}
+    .bad{color:var(--bad);border-color:#f2c6cf;background:#fff2f4}
+    .btnrow{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.65rem}
+    button{border:1px solid var(--border);background:#fff;border-radius:10px;padding:.55rem .75rem;cursor:pointer;font-weight:700}
+    button:hover{border-color:#d6ccc6}
+    .result{margin-top:.75rem;padding:.85rem .95rem;border:1px dashed #d6ccc6;border-radius:12px;background:#fff}
+    .result strong{color:var(--accent)}
+    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:#fff;border:1px solid var(--border);padding:.12rem .35rem;border-radius:6px;font-size:.9rem}
+    footer{text-align:center;padding:2.2rem 1rem 2.6rem;color:var(--muted);font-size:.95rem}
   </style>
 </head>
 <body>
+<header>
+  <h1>Wine for Dummies (Hospitality Edition)</h1>
+  <p>Not “how to drink wine” — how to <b>serve, describe, and sell</b> wine like a pro, fast. Built for pre-shift brains.</p>
+</header>
 
-  <header>
-    <h1>Wine for Dummies</h1>
-    <p>Simple wine knowledge without the snobbery.</p>
-  </header>
+<div class="wrap">
+  <div class="grid">
 
-  <main>
-
-    <section>
-      <h2>🍷 Start Here</h2>
-      <p>
-        Wine doesn't have to be complicated. You don’t need to “detect saddle leather at sunset.”
-        You just need to know what you like and why.
-      </p>
+    <!-- 60-second baseline -->
+    <section class="card col-12">
+      <h2>1-minute Wine Framework (what you say, every time)</h2>
+      <div class="rule">
+        <p><b>Describe any wine in 4 beats:</b></p>
+        <div class="chips">
+          <span class="chip"><b>1) Style</b>: still / sparkling</span>
+          <span class="chip"><b>2) Body</b>: light / medium / full</span>
+          <span class="chip"><b>3) Structure</b>: acid (fresh) + tannin (grip)</span>
+          <span class="chip"><b>4) Flavor</b>: fruit + “other” (oak, herbs, mineral)</span>
+        </div>
+        <p class="muted">Translation: you’re giving the guest decision-relevant info, not poetry.</p>
+      </div>
     </section>
 
-    <section>
-      <h2>🍇 Red vs White</h2>
+    <!-- Service + temps + glass -->
+    <section class="card col-6">
+      <h2>Service Standards</h2>
+      <h3>Temps (fast + safe)</h3>
       <ul>
-        <li><strong>Red Wine</strong> – Made with grape skins. More tannin. Usually bigger structure.</li>
-        <li><strong>White Wine</strong> – No skins during fermentation. Higher acidity. Fresher profile.</li>
+        <li><b>Sparkling:</b> cold (think “fridge + a bit”).</li>
+        <li><b>Whites / Rosé:</b> cold, but not numb.</li>
+        <li><b>Light reds:</b> cool (a short chill helps).</li>
+        <li><b>Big reds:</b> “cellar cool” not room-temp sauna.</li>
+      </ul>
+      <div class="rule">
+        <p><span class="pill ok">Pro move</span> If a red seems hot/alcoholic, a quick chill can fix the guest experience without changing the wine list.</p>
+      </div>
+
+      <h3 style="margin-top:1rem">Pours + presentation</h3>
+      <ul>
+        <li>Show label, confirm vintage if relevant, then pour.</li>
+        <li>Don’t fill the glass “to be generous” — it kills aroma and looks sloppy.</li>
+        <li>If a guest is paying real money: offer a taste first (house standards vary).</li>
       </ul>
     </section>
 
-    <section>
-      <h2>🌍 Common Grapes</h2>
+    <section class="card col-6">
+      <h2>Guest Questions (scriptable)</h2>
+      <details open>
+        <summary>“Is it sweet?”</summary>
+        <p>Ask: <b>“Do you mean fruity or actually sweet?”</b> Then steer:</p>
+        <ul>
+          <li><b>Dry but fruity:</b> “ripe fruit, not sugary.”</li>
+          <li><b>Actually sweet:</b> recommend the specific sweet option (don’t pretend a dry wine is sweet).</li>
+        </ul>
+      </details>
+      <details style="margin-top:.7rem">
+        <summary>“What’s smooth?”</summary>
+        <p>Translate “smooth” into structure:</p>
+        <ul>
+          <li><b>Red:</b> low tannin + softer acid.</li>
+          <li><b>White:</b> lower acid + maybe some oak/texture.</li>
+        </ul>
+      </details>
+      <details style="margin-top:.7rem">
+        <summary>“What’s your recommendation?”</summary>
+        <p>Ask one question: <b>“Light and fresh, or rich and bold?”</b> Then pick confidently.</p>
+      </details>
+    </section>
+
+    <!-- Upselling ethically -->
+    <section class="card col-8">
+      <h2>Upselling Without Being Weird</h2>
+      <div class="rule">
+        <p><b>Rule:</b> Upsell by solving a preference problem, not by pushing price.</p>
+        <p class="muted">Guests don’t hate premium wine. They hate feeling hustled.</p>
+      </div>
+
+      <h3>3 “clean” upgrade lines</h3>
       <ul>
-        <li><strong>Pinot Grigio</strong> – Light, crisp, easy.</li>
-        <li><strong>Chardonnay</strong> – From clean and citrusy to rich and buttery.</li>
-        <li><strong>Pinot Noir</strong> – Elegant, red fruit, low tannin.</li>
-        <li><strong>Cabernet Sauvignon</strong> – Bold, structured, dark fruit.</li>
+        <li><b>Same style, better version:</b> “If you like that, the next step up has the same vibe but more depth.”</li>
+        <li><b>Food match upgrade:</b> “With your steak, this one will taste smoother because it has more structure.”</li>
+        <li><b>Occasion upgrade:</b> “If it’s a celebration, that bottle drinks more ‘special’ without being polarizing.”</li>
+      </ul>
+
+      <h3 style="margin-top:1rem">The 2-question bottle sale</h3>
+      <ul>
+        <li>Q1: “Are we trying to match food or just drink?”</li>
+        <li>Q2: “Do you like <b>fresh/crisp</b> or <b>rich/round</b>?”</li>
       </ul>
     </section>
 
-    <section>
-      <h2>🥂 How to Order Wine</h2>
-      <p>
-        Skip the vague stuff. Instead of saying “I want something smooth,” try:
-      </p>
+    <!-- Pairing shortcuts -->
+    <section class="card col-4">
+      <h2>Pairing Cheats (actually usable)</h2>
       <ul>
-        <li>“I like high acid wines.”</li>
-        <li>“I prefer low tannin reds.”</li>
-        <li>“I want something dry and mineral.”</li>
+        <li><b>Acid cuts fat:</b> creamy, fried → crisp/high-acid.</li>
+        <li><b>Tannin + protein:</b> steak, lamb → structured red.</li>
+        <li><b>Heat hates tannin:</b> spicy → aromatic whites / lower tannin reds.</li>
+        <li><b>Salt loves bubbles:</b> salty snacks/oysters → sparkling.</li>
       </ul>
+      <div class="rule">
+        <p><span class="pill warn">Watch-out</span> Big tannin + spicy food can feel like sandpaper.</p>
+      </div>
     </section>
 
-    <section>
-      <h2>📚 Learn More</h2>
-      <p>
-        This project is open source. Contribute beginner-friendly explanations.
-      </p>
-      <p>
-        <a href="https://github.com/yourusername/wine-for-dummies">View on GitHub</a>
-      </p>
+    <!-- Faults + what to do -->
+    <section class="card col-12">
+      <h2>Wine Faults: Identify + Respond (no drama)</h2>
+      <div class="grid">
+        <div class="card col-4" style="box-shadow:none">
+          <h3><span class="pill bad">Corked (TCA)</span></h3>
+          <p class="muted">Smells like wet cardboard / damp basement. Fruit feels muted.</p>
+          <p><b>Action:</b> Replace immediately. Don’t argue. You’re not on trial.</p>
+        </div>
+        <div class="card col-4" style="box-shadow:none">
+          <h3><span class="pill warn">Oxidized</span></h3>
+          <p class="muted">Flat, bruised apple/nutty, brownish color, tired.</p>
+          <p><b>Action:</b> Replace (often open-too-long BTG issue).</p>
+        </div>
+        <div class="card col-4" style="box-shadow:none">
+          <h3><span class="pill warn">Too cold / too warm</span></h3>
+          <p class="muted">Too cold = muted. Too warm = boozy + sloppy.</p>
+          <p><b>Action:</b> Adjust temp before swapping wine.</p>
+        </div>
+      </div>
     </section>
 
-  </main>
+    <!-- The staff drill tool -->
+    <section class="card col-12">
+      <h2>Pre-Shift Drill (2 minutes)</h2>
+      <p class="muted">Click once, practice the script, then go sell wine like you mean it.</p>
 
-  <footer>
-    Built for curious drinkers. No wine snobs allowed.
-  </footer>
+      <div class="btnrow">
+        <button id="btnPrompt">Generate a “table question”</button>
+        <button id="btnPitch">Generate a “15-second wine description”</button>
+        <button id="btnObjection">Generate a “guest objection”</button>
+      </div>
 
+      <div id="out" class="result" aria-live="polite">
+        <strong>Tip:</strong> Make this a ritual — one rep per shift builds confidence fast.
+      </div>
+    </section>
+
+    <!-- Make it yours -->
+    <section class="card col-12">
+      <h2>Make This Site Specific to Your Venue</h2>
+      <p class="muted">Right now it’s universal. To make it deadly useful, add your actual BTG list + 1-liners.</p>
+      <ul>
+        <li>Create a section: <b>“Our By-The-Glass in 1 sentence each”</b></li>
+        <li>Add: <b>“Our 3 safest bottle recs for groups”</b></li>
+        <li>Add: <b>“Our top 5 pairings with menu items”</b></li>
+      </ul>
+      <div class="rule">
+        <p><b>Best practice:</b> Staff should be able to sell any BTG wine with one sentence + one pairing.</p>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<footer>
+  Built for hospitality teams. No sniffing contests. 🍷
+</footer>
+
+<script>
+  const out = document.getElementById("out");
+
+  const tableQuestions = [
+    "Guest: “I usually drink Pinot Grigio. What’s closest on your list?”",
+    "Guest: “We’re ordering steak + seafood. One bottle that works?”",
+    "Guest: “I don’t like sweet wine. What’s the driest white you have?”",
+    "Guest: “I want a red that’s smooth and not too heavy.”",
+    "Guest: “What’s a good celebration bottle that won’t scare my friends?”"
+  ];
+
+  const pitches = [
+    { wine:"Crisp white (high acid)", line:"Light-bodied and crisp with bright acidity — super refreshing and it cuts through anything fried or creamy." },
+    { wine:"Textured/oaked white", line:"Medium-bodied with a rounder, smoother feel — a bit richer, great for poultry, salmon, or buttery sauces." },
+    { wine:"Light red (low tannin)", line:"Light and juicy with low tannin — easy-drinking red fruit, perfect if you hate heavy reds." },
+    { wine:"Structured red", line:"Fuller-bodied with more structure — darker fruit and a bit of grip; built for steak and richer dishes." },
+    { wine:"Sparkling", line:"Bright, crisp bubbles — works as a welcome drink and it’s weirdly good with salty snacks and seafood." }
+  ];
+
+  const objections = [
+    "Guest: “This tastes too sharp.” (They mean high acid.)",
+    "Guest: “This red is bitter.” (They mean tannin.)",
+    "Guest: “This white tastes like nothing.” (Too cold / low flavor intensity.)",
+    "Guest: “This tastes sweet.” (They mean fruity, or it’s actually off-dry.)",
+    "Guest: “We want something ‘nice’ but not expensive.” (They want confidence + safety.)"
+  ];
+
+  function pick(arr){ return arr[Math.floor(Math.random() * arr.length)]; }
+
+  document.getElementById("btnPrompt").addEventListener("click", () => {
+    out.innerHTML = "<strong>Table question:</strong> " + pick(tableQuestions) +
+      "<br><span class='muted'>Your move: ask 1 clarifier, then recommend 1 option.</span>";
+  });
+
+  document.getElementById("btnPitch").addEventListener("click", () => {
+    const p = pick(pitches);
+    out.innerHTML = "<strong>15-second description:</strong> " +
+      "<br><span class='muted'>Wine type:</span> " + p.wine +
+      "<br><span class='muted'>Script:</span> “" + p.line + "”";
+  });
+
+  document.getElementById("btnObjection").addEventListener("click", () => {
+    out.innerHTML = "<strong>Guest objection:</strong> " + pick(objections) +
+      "<br><span class='muted'>Translate their word into acid/tannin/body, then solve it.</span>";
+  });
+</script>
 </body>
 </html>
