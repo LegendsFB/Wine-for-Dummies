@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <title>Wine for Dummies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8" />
   <title>Wine for Dummies (Hospitality Edition)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
+<style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
+      line-height: 1.6;
     :root{
       --bg:#f6f4f2; --card:#ffffff; --ink:#1f1f1f; --muted:#5a5a5a;
       --accent:#4b0f1c; --border:#e7e2de; --chip:#f1ece8;
       --ok:#1d7a3a; --warn:#a35a00; --bad:#b00020;
-    }
+}
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
     header{background:var(--accent);color:#fff;padding:2.1rem 1rem 1.2rem;text-align:center}
@@ -54,9 +63,19 @@
   <p>Not “how to drink wine” — how to <b>serve, describe, and sell</b> wine like a pro, fast. Built for pre-shift brains.</p>
 </header>
 
+    header {
+      background: #4b0f1c;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
 <div class="wrap">
   <div class="grid">
 
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
     <!-- 60-second baseline -->
     <section class="card col-12">
       <h2>1-minute Wine Framework (what you say, every time)</h2>
@@ -69,75 +88,13 @@
           <span class="chip"><b>4) Flavor</b>: fruit + “other” (oak, herbs, mineral)</span>
         </div>
         <p class="muted">Translation: you’re giving the guest decision-relevant info, not poetry.</p>
-        <section class="card col-12">
-  <h2>Our By-The-Glass (Sell in 1 Sentence)</h2>
-  <p class="muted">Staff goal: one clear sentence + one pairing. No rambling.</p>
-
-  <div class="grid">
-
-    <!-- Esedra Pinot Grigio -->
-    <div class="card col-6" style="box-shadow:none">
-      <h3>Esedra | Pinot Grigio — Friuli, Italy</h3>
-      <p><strong>Sell it like this:</strong> Light, crisp, and mineral with lemon and pear — super refreshing and clean.</p>
-      <p><strong>Best for:</strong> Salads, seafood, fried appetizers, patio drinkers.</p>
-      <p class="muted">Serve 6–8°C. White glass.</p>
-    </div>
-
-    <!-- Villa Maria Sauvignon Blanc -->
-    <div class="card col-6" style="box-shadow:none">
-      <h3>Villa Maria | Sauvignon Blanc — Marlborough, NZ</h3>
-      <p><strong>Sell it like this:</strong> Zesty and aromatic — lime, grapefruit, and tropical fruit with a sharp fresh snap.</p>
-      <p><strong>Best for:</strong> Oysters, goat cheese, citrus dishes, anything bright.</p>
-      <p class="muted">Serve 6–8°C. White glass.</p>
-    </div>
-
-    <!-- 3XP Chardonnay -->
-    <div class="card col-6" style="box-shadow:none">
-      <h3>3XP | Chardonnay — Niagara, Canada</h3>
-      <p><strong>Sell it like this:</strong> Smooth but still fresh — apple and lemon with a soft creamy finish.</p>
-      <p><strong>Best for:</strong> Chicken, salmon, creamy sauces.</p>
-      <p class="muted">Serve 8–10°C. White glass.</p>
-    </div>
-
-    <!-- Leyda Pinot Noir -->
-    <div class="card col-6" style="box-shadow:none">
-      <h3>Leyda Reserve | Pinot Noir — Chile</h3>
-      <p><strong>Sell it like this:</strong> Silky and easy — red berries with a touch of spice, not heavy.</p>
-      <p><strong>Best for:</strong> Salmon, duck, mushroom dishes, guests who “don’t like big reds.”</p>
-      <p class="muted">Serve 14–16°C. Burgundy glass.</p>
-    </div>
-
-    <!-- Garnacha -->
-    <div class="card col-6" style="box-shadow:none">
-      <h3>Pago Aylés “Unexpected” | Garnacha — Spain</h3>
-      <p><strong>Sell it like this:</strong> Juicy and smooth — ripe red fruit with a warm little spice note.</p>
-      <p><strong>Best for:</strong> Pizza, burgers, tapas, group-friendly tables.</p>
-      <p class="muted">Serve 16–18°C. Large red glass.</p>
-    </div>
-
-    <!-- Cabernet -->
-    <div class="card col-6" style="box-shadow:none">
-      <h3>Don David Reserve | Cabernet Sauvignon — Argentina</h3>
-      <p><strong>Sell it like this:</strong> Bold and classic — dark fruit, a touch of oak, firm dry finish.</p>
-      <p><strong>Best for:</strong> Steak, lamb, heavier mains.</p>
-      <p class="muted">Serve 17–18°C. Large red glass. Decant optional.</p>
-    </div>
-
-  </div>
-
-  <div class="rule">
-    <p><strong>Training Drill:</strong> Staff must be able to answer:</p>
-    <ul>
-      <li>“What’s your lightest red?” → Leyda Pinot Noir</li>
-      <li>“What’s the boldest red?” → Don David Cabernet</li>
-      <li>“What’s the crispest white?” → Sauvignon Blanc</li>
-      <li>“What’s the smooth white?” → Chardonnay</li>
-    </ul>
-  </div>
-</section>
       </div>
     </section>
 
+    header p {
+      margin-top: 0.5rem;
+      opacity: 0.9;
+    }
     <!-- Service + temps + glass -->
     <section class="card col-6">
       <h2>Service Standards</h2>
@@ -152,6 +109,11 @@
         <p><span class="pill ok">Pro move</span> If a red seems hot/alcoholic, a quick chill can fix the guest experience without changing the wine list.</p>
       </div>
 
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
       <h3 style="margin-top:1rem">Pours + presentation</h3>
       <ul>
         <li>Show label, confirm vintage if relevant, then pour.</li>
@@ -160,6 +122,13 @@
       </ul>
     </section>
 
+    section {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
     <section class="card col-6">
       <h2>Guest Questions (scriptable)</h2>
       <details open>
@@ -184,6 +153,10 @@
       </details>
     </section>
 
+    h2 {
+      margin-top: 0;
+      color: #4b0f1c;
+    }
     <!-- Upselling ethically -->
     <section class="card col-8">
       <h2>Upselling Without Being Weird</h2>
@@ -192,6 +165,9 @@
         <p class="muted">Guests don’t hate premium wine. They hate feeling hustled.</p>
       </div>
 
+    ul {
+      padding-left: 1.2rem;
+    }
       <h3>3 “clean” upgrade lines</h3>
       <ul>
         <li><b>Same style, better version:</b> “If you like that, the next step up has the same vibe but more depth.”</li>
@@ -199,6 +175,12 @@
         <li><b>Occasion upgrade:</b> “If it’s a celebration, that bottle drinks more ‘special’ without being polarizing.”</li>
       </ul>
 
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
       <h3 style="margin-top:1rem">The 2-question bottle sale</h3>
       <ul>
         <li>Q1: “Are we trying to match food or just drink?”</li>
@@ -206,6 +188,11 @@
       </ul>
     </section>
 
+    a {
+      color: #4b0f1c;
+      text-decoration: none;
+      font-weight: 500;
+    }
     <!-- Pairing shortcuts -->
     <section class="card col-4">
       <h2>Pairing Cheats (actually usable)</h2>
@@ -220,6 +207,12 @@
       </div>
     </section>
 
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
     <!-- Faults + what to do -->
     <section class="card col-12">
       <h2>Wine Faults: Identify + Respond (no drama)</h2>
@@ -242,43 +235,87 @@
       </div>
     </section>
 
+  <header>
+    <h1>Wine for Dummies</h1>
+    <p>Simple wine knowledge without the snobbery.</p>
+  </header>
     <!-- The staff drill tool -->
     <section class="card col-12">
       <h2>Pre-Shift Drill (2 minutes)</h2>
       <p class="muted">Click once, practice the script, then go sell wine like you mean it.</p>
 
+  <main>
       <div class="btnrow">
         <button id="btnPrompt">Generate a “table question”</button>
         <button id="btnPitch">Generate a “15-second wine description”</button>
         <button id="btnObjection">Generate a “guest objection”</button>
       </div>
 
+    <section>
+      <h2>🍷 Start Here</h2>
+      <p>
+        Wine doesn't have to be complicated. You don’t need to “detect saddle leather at sunset.”
+        You just need to know what you like and why.
+      </p>
       <div id="out" class="result" aria-live="polite">
         <strong>Tip:</strong> Make this a ritual — one rep per shift builds confidence fast.
       </div>
-    </section>
+</section>
 
+    <section>
+      <h2>🍇 Red vs White</h2>
     <!-- Make it yours -->
     <section class="card col-12">
       <h2>Make This Site Specific to Your Venue</h2>
       <p class="muted">Right now it’s universal. To make it deadly useful, add your actual BTG list + 1-liners.</p>
-      <ul>
+<ul>
+        <li><strong>Red Wine</strong> – Made with grape skins. More tannin. Usually bigger structure.</li>
+        <li><strong>White Wine</strong> – No skins during fermentation. Higher acidity. Fresher profile.</li>
         <li>Create a section: <b>“Our By-The-Glass in 1 sentence each”</b></li>
         <li>Add: <b>“Our 3 safest bottle recs for groups”</b></li>
         <li>Add: <b>“Our top 5 pairings with menu items”</b></li>
-      </ul>
+</ul>
       <div class="rule">
         <p><b>Best practice:</b> Staff should be able to sell any BTG wine with one sentence + one pairing.</p>
       </div>
-    </section>
+</section>
 
+    <section>
+      <h2>🌍 Common Grapes</h2>
+      <ul>
+        <li><strong>Pinot Grigio</strong> – Light, crisp, easy.</li>
+        <li><strong>Chardonnay</strong> – From clean and citrusy to rich and buttery.</li>
+        <li><strong>Pinot Noir</strong> – Elegant, red fruit, low tannin.</li>
+        <li><strong>Cabernet Sauvignon</strong> – Bold, structured, dark fruit.</li>
+      </ul>
+    </section>
   </div>
 </div>
 
+    <section>
+      <h2>🥂 How to Order Wine</h2>
+      <p>
+        Skip the vague stuff. Instead of saying “I want something smooth,” try:
+      </p>
+      <ul>
+        <li>“I like high acid wines.”</li>
+        <li>“I prefer low tannin reds.”</li>
+        <li>“I want something dry and mineral.”</li>
+      </ul>
+    </section>
 <footer>
-  Built for Legends. No sniffing contests. 🍷
+  Built for hospitality teams. No sniffing contests. 🍷
 </footer>
 
+    <section>
+      <h2>📚 Learn More</h2>
+      <p>
+        This project is open source. Contribute beginner-friendly explanations.
+      </p>
+      <p>
+        <a href="https://github.com/yourusername/wine-for-dummies">View on GitHub</a>
+      </p>
+    </section>
 <script>
   const out = document.getElementById("out");
 
@@ -308,11 +345,15 @@
 
   function pick(arr){ return arr[Math.floor(Math.random() * arr.length)]; }
 
+  </main>
   document.getElementById("btnPrompt").addEventListener("click", () => {
     out.innerHTML = "<strong>Table question:</strong> " + pick(tableQuestions) +
       "<br><span class='muted'>Your move: ask 1 clarifier, then recommend 1 option.</span>";
   });
 
+  <footer>
+    Built for curious drinkers. No wine snobs allowed.
+  </footer>
   document.getElementById("btnPitch").addEventListener("click", () => {
     const p = pick(pitches);
     out.innerHTML = "<strong>15-second description:</strong> " +
@@ -327,4 +368,4 @@
 </script>
 </body>
 </html>
-
+</html>
